@@ -4,7 +4,7 @@ title: "A new telegram phishing campaign"
 date: 2025-03-18 14:05:00 -0000
 categories: phishing Telegram
 ---
-As a SOC analyst, I have read many blogs about phishing campaigns, malware, etc, however, I have never tried writing one. So, when I recently I saw a Telegram scam, I decided it would be a perfect opportunity for me to have some fun and learn something new. Hope you enjoy!
+As a SOC analyst, I have read many blogs about phishing campaigns, malware, etc, however, I have never tried writing one. So, when I recently I saw a Telegram scam message, I decided it would be a perfect opportunity for me to have some fun and learn something new. Hope you enjoy!
 
 ## TLDR
 ### IOCs
