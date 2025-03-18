@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "A new telegram phishing campaign"
+description: "A new phishing campaign targeting Russian users!"
 date: 2025-03-18 14:05:00 -0000
 categories: phishing Telegram
 ---
