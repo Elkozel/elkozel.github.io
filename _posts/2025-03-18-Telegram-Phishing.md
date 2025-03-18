@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "A new telegram phishing campaign"
-description: "A new phishing campaign targeting Russian users!"
 date: 2025-03-18 14:05:00 -0000
 categories: phishing Telegram
 ---
+As a SOC analyst, I have read many blogs about phishing campaigns, malware, etc, however, I have never tried writing one. So, when I recently I saw a Telegram scam, I decided it would be a perfect opportunity for me to have some fun and learn something new. Hope you enjoy!
 
 ## TLDR
 ### IOCs
@@ -26,8 +26,6 @@ alert dns any any -> any any (msg:"Telegram phishing"; dns.query; content:"teleg
 ```
 Lastly, there might be a chance catching this behavior via the miniApps being used. (Sorry, I don't have time to create and test the rules needed for this)
 
-## Introduction
-As a SOC analyst, I have read many blogs about phishing campaigns, malware, etc, however, I have never tried writing one. So, when I recently I saw a Telegram scam, I decided it would be a perfect opportunity for me to have some fun and learn something new. Hope you enjoy!
 ## Initial contact
 The initial contact was with a Telegram message, as always:
 
