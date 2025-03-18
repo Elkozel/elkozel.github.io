@@ -10,11 +10,13 @@ categories: phishing Telegram
 **URLs**:
 - hxxps[://]telegram[.]org-org[.]ru
 - hxxps[://]tinyurl[.]com/gynecologmsc
+
 **miniApps used**:
 - hxxps[://]walletbot[.]me/wv
 - hxxps[://]farm[.]joincommunity[.]xyz/waiting
 - hxxps[://]app[.]send[.]tg/
 - hxxps[://]telegram[.]blum[.]codes/
+
 ### Suricata rules
 Unfortunately, since the website uses QUIC, the SNI is encrypted, so censoring such traffic is not possible, unless SSL offloading is used. Having that said, we can hopefully catch the unencrypted DNS queries:
 ```suricata
@@ -26,7 +28,7 @@ Lastly, there might be a chance catching this behavior via the miniApps being us
 As a SOC analyst, I have read many blogs about phishing campaigns, malware, etc, however, I have never tried writing one. So, when I recently I saw a Telegram scam, I decided it would be a perfect opportunity for me to have some fun and learn something new. Hope you enjoy!
 ## Initial contact
 The initial contact was with a Telegram message, as always:
-![Telegram message](telegram_message.png)
+![Telegram message](assets/img/telegram_message.png)
 Translated, the message states:
 ```
 Dear friends, good day! I would like to address you with an important request.  
