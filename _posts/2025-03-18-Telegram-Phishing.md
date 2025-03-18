@@ -29,7 +29,9 @@ Lastly, there might be a chance catching this behavior via the miniApps being us
 As a SOC analyst, I have read many blogs about phishing campaigns, malware, etc, however, I have never tried writing one. So, when I recently I saw a Telegram scam, I decided it would be a perfect opportunity for me to have some fun and learn something new. Hope you enjoy!
 ## Initial contact
 The initial contact was with a Telegram message, as always:
+
 ![Telegram message](/assets/img/telegram_message.png)
+
 Translated, the message states:
 ```
 Dear friends, good day! I would like to address you with an important request.  
@@ -43,11 +45,13 @@ Thank you very much in advance to everyone who responded, have a good day!
 So, of course I wanted to show my support: click the link (`https://tinyurl[.]com/gynecologmsc`), vote for my favorite, and you continue with my day!
 
 However, there is a catch ... once the user tries to vote, the website prompts for a Telegram login "to combat cheating:
+
 ![Phishing Login](/assets/img/phishing_login.png)
 
 (*The website is originally in Russian, however for the purpose of this blog, it was translated to English with Google Translate.*)
 
 After that the user is presented with the default Telegram Web sign in and congratulates you once the user authenticates:
+
 ![Phishing success](/assets/img/phishing_success.png)
 
 ## Diving deeper
