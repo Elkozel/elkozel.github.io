@@ -21,8 +21,6 @@ author: Tsvetomir Hristov
 
 navbar-links:
   About Me: "aboutme"
-  Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
 
 ################
 # --- Logo --- #
