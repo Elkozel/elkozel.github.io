@@ -40,10 +40,11 @@ For me it is very important, so I very much ask you to support me.
 Thank you very much in advance to everyone who responded, have a good day!
 ```
 
-So, of course I wanted to show my support: click the link (https://tinyurl[.]com/gynecologmsc), vote for my favorite, and you continue with my day!
+So, of course I wanted to show my support: click the link (`https://tinyurl[.]com/gynecologmsc`), vote for my favorite, and you continue with my day!
 
 However, there is a catch ... once the user tries to vote, the website prompts for a Telegram login "to combat cheating:
 ![Phishing Login](/assets/img/phishing_login.png)
+
 (*The website is originally in Russian, however for the purpose of this blog, it was translated to English with Google Translate.*)
 
 After that the user is presented with the default Telegram Web sign in and congratulates you once the user authenticates:
@@ -54,17 +55,16 @@ Looking deeper at the domain, neither of the popular search engines have indexed
 - site:org-org.ru
 - telegram.org-org
 - telegram AND "org-org"
-The IP belongs to cloudflare: https://www.shodan.io/host/172.67.219.87
-and VirusTotal hasn't heard of it: https://www.virustotal.com/gui/url-analysis/u-18ac451554773db3c8fb7f6a6febc41275986f6d2a9987810787884e59235ed8-1742000651
 
-Judging by the certificate, the campaign has been going for almost a month (https://crt.sh/?q=org-org.ru):
+The IP is part of cloudflare: [Shoudan](https://www.shodan.io/host/172.67.219.87) and [VirusTotal](https://www.virustotal.com/gui/url-analysis/u-18ac451554773db3c8fb7f6a6febc41275986f6d2a9987810787884e59235ed8-1742000651) hasn't heard of it.
+Judging by the [certificate](https://crt.sh/?q=org-org.ru), the campaign has been going for almost a month:
 
 | crt.sh   ID | Logged   At  ⇧ | Not   Before | Not   After | Common Name |    Matching   Identities    |             Issuer   Name             |
 | :---------: | :------------: | :----------: | :---------: | :---------: | :-------------------------: | :-----------------------------------: |
 |  1.69E+10   |   28.2.2025    |  28.2.2025   |  29.5.2025  | org-org.ru  | \*.org-org.ru<br>org-org.ru | C=US, O=Google Trust Services, CN=WE1 |
 
 ### The URL
-There is nothing special in the URL: hxxps[://]telegram[.]org-org[.]ru/gynecologmsc/vts/Bsb6Uyd= 
+There is nothing special in the URL: `hxxps[://]telegram[.]org-org[.]ru/gynecologmsc/vts/Bsb6Uyd=`. 
 The only interesting thing is the last part, which is an ID, dynamically allocated per connection on the server side (as it is already hardcoded in the JS code):
 ```js
   content.querySelector(".evgjcunq_ilEoAQHN").addEventListener("click", () => {
@@ -149,7 +149,7 @@ Looking deeper into the Telegram login code, the code fetches the page from `./p
 ```
 However, this is where the phishing website loads a different page (located at `./2xdtpe8hc3yy.js`)
 ### MiniApps
-The code enrolls the user for a couple of Telegram miniApps via the [messages.requestWebView](https://core.telegram.org/method/messages.requestWebView)API endpoint and sends the response back to the server. Now you might ask, why the heck should I care about those miniApps, so let me copy-paste the Telegram explanation:
+The code enrolls the user for a couple of Telegram miniApps via the [messages.requestWebView](https://core.telegram.org/method/messages.requestWebView) API endpoint and sends the response back to the server. Now you might ask, why the heck should I care about those miniApps, so let me copy-paste the Telegram explanation:
 ```
 Interactive [HTML5 Mini Apps](https://core.telegram.org/bots/webapps) on Telegram can completely replace **any website**.
 
